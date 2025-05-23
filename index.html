@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashwin Ram | Data Science Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/tagcloud@2.2.0/dist/TagCloud.min.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .hero {
+      background: linear-gradient(135deg, #343a40, #495057);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-weight: 800;
+      font-size: 3rem;
+    }
+    .section-title {
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #dee2e6;
+      padding-bottom: .5rem;
+    }
+    .project-card {
+      transition: transform 0.2s ease-in-out;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    #skill-cloud {
+      width: 100%;
+      height: 300px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Ashwin Ram</h1>
+    <p>Data Science Portfolio | MS Applied Data Science @ UChicago</p>
+    <a href="Ashwin_Ram_Venkataraman-Resume.pdf" class="btn btn-outline-light mt-3" download>Download Resume</a>
+  </header>
+
+  <main class="container py-5">
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I'm a data science graduate student at the University of Chicago with a strong foundation in applied machine learning,
+        statistical modeling, and data engineering. I bring hands-on experience from internships across finance, telecom,
+        and retail, where I've deployed ML models and built end-to-end data pipelines. I’m passionate about transforming raw data
+        into actionable insights and scalable systems.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Monocular Vision System</h5>
+              <p class="card-text">Depth, lane, and steering estimation for driver assistance using CARLA & real-world data.</p>
+              <a href="https://github.com/ashhhwin" class="btn btn-primary" target="_blank">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Agentic YouTube AI</h5>
+              <p class="card-text">Multi-agent content generation system trained on top YouTube creators across industries.</p>
+              <a href="https://github.com/ashhhwin" class="btn btn-primary" target="_blank">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Credit Risk Scoring</h5>
+              <p class="card-text">Built interpretable credit scoring models with XGBoost, SHAP & interactive dashboards.</p>
+              <a href="https://github.com/ashhhwin" class="btn btn-primary" target="_blank">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <ul>
+        <li><strong>MS in Applied Data Science</strong>, University of Chicago (2024–2025)</li>
+        <li><strong>BE in Computer Science</strong>, SRMIST (2020–2024)</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Key Skills</h2>
+      <div id="skill-cloud"></div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4 border-top">
+    <p>Connect: <a href="mailto:ashwinram@uchicago.edu">ashwinram@uchicago.edu</a> | <a href="https://www.linkedin.com/in/ashwinramv/" target="_blank">LinkedIn</a> | <a href="https://github.com/ashhhwin" target="_blank">GitHub</a></p>
+  </footer>
+
+  <script>
+    const skills = [
+      "Python", "R", "SQL", "TensorFlow", "PyTorch", "Spark", "Tableau", "Power BI", "Docker", "Kafka", "MLflow", "Causal Inference",
+      "Optimization", "A/B Testing", "Looker", "GCP", "AWS", "XGBoost", "GRU", "Bayesian ML"
+    ];
+    TagCloud("#skill-cloud", skills, {
+      radius: 150,
+      maxSpeed: "fast",
+      initSpeed: "normal",
+      direction: 135,
+      keep: true
+    });
+  </script>
+</body>
+</html>
